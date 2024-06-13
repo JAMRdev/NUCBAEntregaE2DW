@@ -1,0 +1,119 @@
+/* FORMAT */
+:root {
+  --greyPrincipal: #262626;
+  --greySecundary: rgb(77, 77, 77);
+  --backgroundColor: #0f0f0f;
+  --principalColor: #99fe54;
+  --alternativeGreen: #135200;
+  --principalColorVariation1: #6e6e6e;
+  --principalColorVariation2: #a0a0a0;
+  --secundaryColor: rgb(255, 0, 115);
+  --white: #fff;
+  --black: #000;
+
+  --principalFont: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--principalFont);
+  box-sizing: border-box;
+}
+
+/* BODY SECTION */
+body {
+  background-color: var(--backgroundColor);
+}
+
+/* HEADER SECTION */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0rem 1rem 0rem;
+  box-shadow: 0 0 0 0.1rem var(--principalColor);
+}
+
+.animatedBG {
+  background: linear-gradient(
+    93deg,
+    var(--black),
+    var(--black),
+    var(--alternativeGreen)
+  );
+  background-size: 120% 120%;
+  animation: gradient-animation 4.5s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo {
+  width: 10rem;
+}
+
+.logo:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease-in;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.linkMenu {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 4px;
+}
+
+.newTabIcon {
+  max-width: 9px;
+}
+
+.linkMenu:hover {
+  color: var(--principalColorVariation2);
+  text-decoration: overline;
+}
+
+.linkMenu:active {
+  color: var(--principalColor);
+}
+
+.linkMenu_Active {
+  color: var(--principalColor);
+}
+
+/* MAIN SECTION */
+main {
+  margin-top: 4px;
+  height: 84vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  height: 7vh;
+  color: var(--white);
+}
